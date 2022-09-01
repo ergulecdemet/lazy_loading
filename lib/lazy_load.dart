@@ -16,7 +16,7 @@ class _LazyLoadState extends State<LazyLoad> {
   @override
   void initState() {
     super.initState();
-    dummyList = List.generate(10, (index) => "Item: ${index + 1}");
+    dummyList = List.generate(_currentMax, (index) => "Item: ${index + 1}");
     _scrollController.addListener(() {
       if (_scrollController.position.pixels ==
           _scrollController.position.maxScrollExtent) {
